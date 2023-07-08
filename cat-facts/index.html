@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- TailWind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- #8E9B90 ASH GRAY -->
+    <!-- #93C0A4 CAMBRIDGE BLUE -->
+    <!-- #B6C4A2 SAGE -->
+    <!-- #D4CDAB DUTCH WHITE -->
+    <!-- #DCE2BD BEIGE -->
+    <div id="app">
+        <main class = "h-screen flex flex-col" :class = "selectedFont">
+            <header class = "h-20 flex justify-center items-center text-center">
+                <h1 class = "text-white text-4xl">
+                    Cats Facts
+                </h1>
+            </header>
+            <section class = "grow  flex justify-center items-center text-center">
+                <div class="container px-8 mx-auto">
+                    <div>
+                        <p class = "text-white text-xl ">
+                            {{fact}}
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div @click = "getRandomClass()" class = "flex justify-center items-center bg-[#DCE2BD] rounded-full p-6 m-4">
+                    <div>
+                        <button id = "randomize">
+                            <i class="fa-solid fa-dice fa-beat fa-2xl" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                    <div class = "ml-4 text-center text-white text-2xl">
+                        <label for="randomize">Randomize Font</label>
+                    </div>
+
+                </div>
+                <div @click = "getRandomFact()" class = "flex justify-center items-center bg-[#DCE2BD] rounded-full p-6 m-4">
+                    <div>
+                        <button id = "randomize">
+                            <i class="fa-solid fa-dice fa-beat fa-2xl" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                    <div class = "ml-4 text-center text-white text-2xl">
+                        <label for="randomize">Randomize Fact</label>
+                    </div>
+
+                </div>
+            </footer>
+
+        </main>
+    </div>
+    <!-- Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
