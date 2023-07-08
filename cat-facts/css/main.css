@@ -1,3 +1,7 @@
+main{
+    overflow-y: auto;
+}
+
 @font-face {
     font-family: oriental;
     src: url("../font/OrientalCatsLight-2OzB8.otf");
